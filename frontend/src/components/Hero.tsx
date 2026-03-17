@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ChefHat, ShoppingBag } from 'lucide-react';
+import { openWhatsApp } from '../utils/whatsapp';
 
 const FallingFoodAnimation = () => {
   return (
@@ -139,6 +140,7 @@ export const Hero = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => openWhatsApp("Hello Mrs. Kitchen, I'd like to place an order!")}
               className="px-6 md:px-8 py-3 md:py-4 bg-brand-600 hover:bg-brand-500 text-white rounded-full font-semibold shadow-[0_8px_20px_rgba(225,29,72,0.3)] transition-all flex items-center gap-2 text-sm md:text-base"
             >
               <ShoppingBag size={18} className="md:w-5 md:h-5" />
